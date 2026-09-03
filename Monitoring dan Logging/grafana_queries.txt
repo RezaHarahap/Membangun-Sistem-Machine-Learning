@@ -1,0 +1,9 @@
+Dashboard name wajib: reza_harahap
+1. Total Requests: model_requests_total
+2. Error Rate: rate(model_errors_total[1m])
+3. Average Latency: rate(model_request_latency_seconds_sum[1m]) / rate(model_request_latency_seconds_count[1m])
+4. Positive Predictions: model_positive_predictions_total
+5. Model Availability: model_up
+
+Alert Skilled: ModelServiceDown, query model_up, condition IS BELOW 1 selama 1 menit.
+Ambil screenshot rule dan notifikasi/firing alert.
